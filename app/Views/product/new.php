@@ -30,7 +30,7 @@
 
             <div class="form-group">
                 <label for="example-product-name" class="label-center">password</label>
-                <input name="password" type="text" class="form-control" id="password" aria-describedby="emailHelp" placeholder="masukan password" name="name">
+                <input name="password" type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="masukan password" name="name">
             </div>
 
 
