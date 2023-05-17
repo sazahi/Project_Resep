@@ -77,7 +77,10 @@ class Product extends BaseController
 
     public function about()
     {
-        echo view('product/about');
+        $payload = [
+            "products" => $this->session->get('products')
+        ];
+        echo view('product/about', $payload);
     }
 
 
