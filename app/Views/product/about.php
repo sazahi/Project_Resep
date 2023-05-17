@@ -1,6 +1,5 @@
 <?= $this->extend('base') ?>
 <?= $this->section('content') ?>
-<h5 class="mb-4">Hello <?= session('username') ?> </h5>
 
 <h2>Our Best Menu</h2>
 
@@ -41,8 +40,6 @@
         <a href="/product/detail" class="btn">Lihat Resep</a>
         </div>
     </div>
-
-
 </section>                  
 
 
