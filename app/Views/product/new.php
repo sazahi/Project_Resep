@@ -23,10 +23,10 @@
 
             <?= form_open('authent'); ?>
 
-            <div class="form-group">
-                <label for="example-product-name" class="label-center">username</label>
-                <input name="username" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="masukan username" name="name" value="<?= old('username') ?>">
-            </div>
+            <div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Email address</label>
+</div>
 
             <div class="form-group">
                 <label for="example-product-name" class="label-center">password</label>
