@@ -100,6 +100,14 @@ class Product extends BaseController
         ];
         echo view('product/admin', $data);
     }
+    public function details($id = null){
+        $this->ProductModel = new ProductModel();
+
+        $data = [
+            'data' => $this->ProductModel->find($id),
+        ];
+        echo view('product/detail', $data);
+    }
 
 
     /**
@@ -133,13 +141,23 @@ class Product extends BaseController
      */
     public function edit()
     {
+        $fileName = "";
+
+        $photo = $this->request->getFile('photo');
+
+        if ($photo) {
+            $fileName = $photo->getRandomName(); // Mendapatkan nama file baru secara acak
+
+            $photo->move('photos', $fileName); // Memindahkan file ke public/photos dengan nama acak
+        }
+
         $id_resep = $this->request->getPost('id_resep');
         $nama_resep = $this->request->getPost('nama_resep');
         $kategori = $this->request->getPost('kategori');
         $waktu = $this->request->getPost('waktu');
         $bahan = $this->request->getPost('bahan');
         $langkah = $this->request->getPost('langkah');
-        $photo = $this->request->getPost("photo" );
+        $photo = $fileName;
 
         $data = [
             'id_resep' => $id_resep,
@@ -148,6 +166,7 @@ class Product extends BaseController
             'waktu' => $waktu,
             'bahan' => $bahan,
             'langkah' => $langkah,
+            'photo' => $photo,
         ];
         // echo $id_resep;
         $this->ProductModel->edit($data);
@@ -205,11 +224,22 @@ class Product extends BaseController
 
     public function insert()
     {
+        $fileName = "";
+
+        $photo = $this->request->getFile('photo');
+
+        if ($photo) {
+            $fileName = $photo->getRandomName(); // Mendapatkan nama file baru secara acak
+
+            $photo->move('photos', $fileName); // Memindahkan file ke public/photos dengan nama acak
+        }
+
         $nama_resep = $this->request->getPost('nama_resep');
         $kategori = $this->request->getPost('kategori');
         $waktu = $this->request->getPost('waktu');
         $bahan = $this->request->getPost('bahan');
         $langkah = $this->request->getPost('langkah');
+        $photo = $fileName;
 
         // echo $nama_resep;
         $data = [
@@ -218,6 +248,7 @@ class Product extends BaseController
             'waktu' => $waktu,
             'bahan' => $bahan,
             'langkah' => $langkah,
+            'photo' => $photo
         ];
 
         $this->ProductModel->add($data);

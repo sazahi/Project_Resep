@@ -3,11 +3,17 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-
+use App\Models\ProductModel;
 class Detailresep extends BaseController
 {
     public function index()
     {
-        return view('/product/detail');
+        $this->ProductModel = new ProductModel();
+
+        $data = [
+            'data' => $this->ProductModel->getAll(),
+        ];
+        echo view('product/detail', $data);
+        
     }
 }

@@ -118,6 +118,7 @@
                             <th class="text-left">WAKTU</th>
                             <th class="text-left">BAHAN</th>
                             <th class="text-left">LANGKAH</th>
+                            <th class="text-left">Photo</th>
                             <th>OPSI</th>
                         </tr>
                         <?php
@@ -130,6 +131,7 @@
                                 <td><?= $row['waktu'] ?></td>
                                 <td><?= $row['bahan'] ?></td>
                                 <td><?= $row['langkah'] ?></td>
+                                <td><img src="/photos/<?= $row['photo'] ?>" alt="" width=100 height=100></td>
                                 <td class="text-center">
                                     <a style="background-color: red; padding:1vh; color: white; border-radius: 5px;" href="<?= base_url('/product/admin/delete/' . $row['id_resep']) ?>" onclick="return confirm('Yakin?')">Hapus</a>
                                     <a style="background-color: aquamarine; padding:1vh; color: black; border-radius: 5px;" href="<?= base_url('/product/admin/' . $row['id_resep']) ?>">Edit</a>
@@ -142,7 +144,7 @@
                 <!--  -->
 
                 <!-- DETAIL FORM -->
-                <form action="<?= ($resep != null) ? base_url('/product/admin/edit') : base_url('/product/admin/insert') ?>" method="POST" class="form">
+                <form action="<?= ($resep != null) ? base_url('/product/admin/edit') : base_url('/product/admin/insert') ?>" method="POST" class="form" enctype="multipart/form-data">
                     <?php if ($resep != null) { ?>
                         <input type="hidden" name="id_resep" value="<?= $resep['id_resep'] ?>">
                     <?php } ?>
@@ -172,6 +174,12 @@
                                 <option value="Main Course" <?= ($resep != null) ? (($resep['kategori'] == 'Main Course') ? 'selected' : '') : '' ?>>Main Course</option>
                                 <option value="Dessert" <?= ($resep != null) ? (($resep['kategori'] == 'Dessert') ? 'selected' : '') : '' ?>>Dessert</option>
                             </select>
+                        </div>
+                        <div class="column s-6">
+                            <label class="inputGroup">
+                                photo
+                            </label>
+                            <input type="file" class="form-control" id="example-product-photo" aria-describedby="photoHelp" name="photo">
                         </div>
                     </div>
                     <div class="formBody row">

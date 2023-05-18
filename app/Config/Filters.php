@@ -21,7 +21,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'filteruser'    => \App\Filters\FilterUser::class,
+
     ];
 
     /**
@@ -30,30 +30,30 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            'filteruser' => [
-                'except' => [
-                    '/',
-                    '/aku',
-                    '/kamu',
-                    '/beta',
-                    '/product',
-                    '/authent',
-                    '/product/about',
-                    '/product/new',
-                    '/product/detail',
-                    '/login',
-                    '/logout'
-                ]
-            ],
+            // 'filteruser' => [
+            //     'except' => [
+            //         '/',
+            //         '/aku',
+            //         '/kamu',
+            //         '/beta',
+            //         '/product',
+            //         '/authent',
+            //         '/product/about',
+            //         '/product/new',
+            //         '/product/detail',
+            //         '/login',
+            //         '/logout'
+            //     ]
+            // ],
         ],
         'after' => [
-            'filteruser' => [
-                'except' => [
-                    '/product/admin',
-                    '/product/admin/*',
-                    '/product/routebaru'
-                ]
-            ],
+            // 'filteruser' => [
+            //     'except' => [
+            //         '/product/admin',
+            //         '/product/admin/*',
+            //         '/product/routebaru'
+            //     ]
+            // ],
         ],
     ];
 

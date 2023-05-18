@@ -39,6 +39,7 @@ $routes->get('product/admin/', 'Product::admin');
 $routes->get('product/admin/(:num)', 'Product::admin/$1');
 $routes->post('product/aboutt', 'Product::about');
 $routes->get('product/detail', 'Detailresep::index');
+$routes->get('product/details/(:segment)', 'Product::details/$1');
 $routes->post('/product/admin/insert', 'Product::insert');
 $routes->post('/product/admin/edit', 'Product::edit');
 $routes->get('/product/admin/delete/(:num)', 'Product::delete/$1');
