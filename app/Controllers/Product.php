@@ -100,6 +100,7 @@ class Product extends BaseController
         ];
         echo view('product/admin', $data);
     }
+    
     public function details($id = null){
         $this->ProductModel = new ProductModel();
 
