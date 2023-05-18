@@ -8,7 +8,16 @@ class Product extends BaseController
 {
     protected $session, $ProductModel;
 
-
+    private $products = [
+        [
+            "id" => "623b476dc4f96",
+            "name" => "Odol",
+            "category" => "utilities",
+            "stock" => 200,
+            "price" => 5000
+        ]
+    ];
+    
     public function __construct()
     {
         helper('form');
