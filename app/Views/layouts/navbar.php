@@ -9,7 +9,7 @@
 
         <div class="collapse navbar-collapse" id="navbarTop">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="/product/about">About</a> </li>
+                <li class="nav-item"><a class="nav-link" href="/aku">About</a> </li>
                 <li class="nav-item"><a class="nav-link" href="/product/new">Admin</a> </li>
             </ul>
         </div>

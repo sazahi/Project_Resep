@@ -21,16 +21,6 @@
             <ul class="sideMenu">
                 <li><a href="<?= base_url('product/admin') ?>"><span class="fa fa-sitemap"></span>KELOLA RESEP</a></li>
                 <li><a href="<?= base_url('logout') ?>"><span class="fa fa-sitemap"></span>LOGOUT</a></li>
-                <!-- <li><a href="" class="has-submenu"><span class="fa fa-table"></span>CREATE</a>
-                    <ul class="submenu">
-                        <li><a href="index.php?c=product&a=list01"><span class="fa fa-list"></span>Product List</a></li>
-                        <li><a href="index.php?c=product&a=list02"><span class="fa fa-tags"></span>Category List</a></li>
-                    </ul>
-                </li> -->
-                <!-- <li><a href="menu_list.php"><span class="fa fa-sitemap"></span>MENU</a></li>
-                <li><a href="invoice_list.php"><span class="fa fa-money"></span>INVOICE</a></li>
-                <li><a href="user_list.php"><span class="fa fa-user-o"></span>USER</a></li>
-                <li><a href="contact_list.php"><span class="fa fa-envelope-o"></span>CONTACT</a></li> -->
             </ul>
         </div>
         <!--     SIDE AREA -->

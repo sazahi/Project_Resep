@@ -100,7 +100,7 @@ class Login extends ResourceController
         session()->remove('id');
         session()->remove('username');
         session()->remove('log');
-        return redirect()->to(base_url('product/about'));
+        return redirect()->to(base_url('aku'));
     }
 
     /**
