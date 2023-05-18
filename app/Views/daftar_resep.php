@@ -54,7 +54,6 @@
                         <th scope="col ">Photo</th>
                         <th scope="col ">Resep</th>
                         <th scope="col ">Category</th>
-                        <th scope="col ">Details</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,10 +66,6 @@
                         <a href="product/details/<?= $item['id_resep'] ?>"><?= $item['nama_resep'] ?></a>
                             </td>
                         <td><?= $item['kategori'] ?></td>
-                        
-                            
-                            
-
                     </tr>
                     <?php endforeach ?>
                 </tbody>
