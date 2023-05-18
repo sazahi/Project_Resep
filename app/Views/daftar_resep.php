@@ -65,11 +65,6 @@
                         <td><img src="/photos/<?= $item['photo'] ?>" alt="" width=100 height=100></td>
                         <td class="align-middle">
                         <a href="product/details/<?= $item['id_resep'] ?>"><?= $item['nama_resep'] ?></a>
-                                <!-- <?php if ($item['nama_resep'] === 'ayam goreng'): ?>
-                                    <a href="product/details/<?= $item['id_resep'] ?>"><?= $item['nama_resep'] ?></a>
-                                <?php elseif ($item['nama_resep'] === 'Donat Talas'): ?>
-                                    <a href="product/detail?name=<?= $item['nama_resep'] ?>"><?= $item['nama_resep'] ?></a>
-                                <?php endif; ?> -->
                             </td>
                         <td><?= $item['kategori'] ?></td>
                         
