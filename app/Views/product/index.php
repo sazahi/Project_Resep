@@ -3,8 +3,8 @@
 <div class="hero">
         <div class="wrapper">
             <div class="heroleft">
-                <h2>Memasak Itu Menyenangkan!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus consequatur porro, dolorum repudiandae natus delectus cupiditate? Excepturi beatae recusandae labore ex, iusto quisquam veritatis officia rerum alias hic delectus veniam.</p>
+                <h2>Detektif Rasa !</h2>
+                <p>Detektif Rasa memberikan  ‘investigasi' pada menu-menu unik dan kekinian,yang kemudian kita juga bisa membuatnya dengan mengetahui resep dari setiap makanan.</p>
                 <a href="aku">Cek Resep Terbaik Kami!</a>
             </div>
             <div class="heroright">
