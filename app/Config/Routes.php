@@ -30,10 +30,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Product::index');
-$routes->get('daftar', 'DaftarResep::index');
 $routes->get('aku', 'Aku::index');
-$routes->get('kamu', 'HelloController::index');
-$routes->get('beta', 'CobaRestfulController::index');
 $routes->get('product/about', 'Product::about');
 $routes->get('product/admin/', 'Product::admin');
 $routes->get('product/admin/(:num)', 'Product::admin/$1');
