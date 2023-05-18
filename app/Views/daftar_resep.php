@@ -1,9 +1,9 @@
 <?= $this->extend('base') ?>
 <?= $this->section('content') ?>
 
-<h1>Our Best Menu</h1>
+<!-- <h1 class = "mt-5">Our Best Menu</h1> -->
 
-<section class="section-card">
+<!-- <section class="section-card">
     <div class="card">
         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="salad" class="card_img">
         <div class="card_details">
@@ -40,12 +40,12 @@
         <a href="/product/detail" class="btn">Lihat Resep</a>
         </div>
     </div>
-</section>       
+</section>        -->
 
 <div class="container mt-5">
     <div class="row mb-4">
         <div class="col-12">
-            <h5 class="mb-4">Daftar Resep</h5>
+            <h1 class="mb-4">Daftar Resep</h1>
 
             <table class="table table-hover ">
                 <thead>
