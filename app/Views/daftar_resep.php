@@ -51,6 +51,7 @@
                 <thead>
                     <tr>
                         <th scope="col ">No</th>
+                        <th scope="col ">Photo</th>
                         <th scope="col ">Resep</th>
                         <th scope="col ">Category</th>
                         <th scope="col ">Details</th>
@@ -61,6 +62,7 @@
                     <?php foreach ($products as $item): ?>
                     <tr>
                         <td><?= $no += 1; ?></td>
+                        <td><img src="/photos/<?= $item['photo'] ?>" alt="" width=100 height=100></td>
                         <td><?= $item['nama_resep'] ?></td>
                         <td><?= $item['kategori'] ?></td>
                         <td>

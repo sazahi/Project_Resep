@@ -139,6 +139,7 @@ class Product extends BaseController
         $waktu = $this->request->getPost('waktu');
         $bahan = $this->request->getPost('bahan');
         $langkah = $this->request->getPost('langkah');
+        $photo = $this->request->getPost("photo" );
 
         $data = [
             'id_resep' => $id_resep,

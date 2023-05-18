@@ -14,7 +14,7 @@ class ProductModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama_resep', 'kategori', 'waktu', 'bahan', 'langkah'];
+    protected $allowedFields    = ['nama_resep', 'kategori', 'waktu', 'bahan', 'langkah', 'photo'];
 
     // Dates
     protected $useTimestamps = false;
