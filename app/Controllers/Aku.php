@@ -26,6 +26,6 @@ class Aku extends BaseController
         echo view('daftar_resep', $payload);
 
     }
-
+    
     
 }

@@ -40,6 +40,12 @@ class ProductModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+    public function searchByName($name)
+    {
+        // Perform the search query based on the provided name
+        return $this->like('nama_resep', $name)->findAll();
+    }
+
     public function getAll()
     {
         return $this->db->table('dataresep')->get()->getResultArray();

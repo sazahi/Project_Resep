@@ -102,6 +102,7 @@ class Product extends BaseController
     }
     
     public function details($id = null){
+
         $this->ProductModel = new ProductModel();
 
         $data = [
@@ -110,6 +111,27 @@ class Product extends BaseController
         echo view('product/detail', $data);
     }
 
+    public function detailSearch($id = null){
+
+        $this->ProductModel = new ProductModel();
+
+        $data = [
+            'data' => $this->ProductModel->find($id),
+        ];
+        echo view('product/detail', $data);
+    }
+
+    public function search()
+    {
+        $searchTerm = $this->request->getGet('search');
+        $productModel = new ProductModel();
+
+        // Perform the search query using the $searchTerm
+        $results = $productModel->searchByName($searchTerm);
+
+        // Pass the results to the view
+        echo view('/search_results', ['results' => $results]);
+    }
 
     /**
      * Create a new resource object, from "posted" parameters
