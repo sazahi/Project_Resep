@@ -187,16 +187,29 @@
                             <label class="inputGroup">
                                 Bahan
                             </label>
-                            <textarea name="bahan" required><?= ($resep != null) ? $resep['bahan'] : '' ?></textarea>
+                            <textarea name="bahan" id="bahan" required><?= ($resep != null) ? $resep['bahan'] : '' ?></textarea>
                         </div>
                         <div class="column s-6" style="padding-left: 5px;">
                             <label class="inputGroup">
                                 Langkah - Langkah
                             </label>
-                            <textarea name="langkah" required><?= ($resep != null) ? $resep['langkah'] : '' ?></textarea>
+                            <textarea name="langkah" id="langkah" required><?= ($resep != null) ? $resep['langkah'] : '' ?></textarea>
                         </div>
                     </div>
                 </form>
+                <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#bahan'))
+        .catch(error => {
+            console.error(error);
+        });
+        ClassicEditor
+        .create(document.querySelector('#langkah'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
                 <div id="pagination">
                     <ul class="pagination list-inline text-center">
