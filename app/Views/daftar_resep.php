@@ -9,7 +9,7 @@
         <form action="/product/search" method="GET">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search by name" name="search" value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>">
-                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                    <button class="btn-outline-primary" type="submit">Search</button>
                 </div>
             </form>
             <h1 class="mb-4">Daftar Resep</h1>
